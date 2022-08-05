@@ -6,6 +6,11 @@
     margin-bottom: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    transition: all 2s;
+}
+
+.pics:hover {
+    transform: scale(1.1, 1.1);
 }
 
 body {
@@ -79,12 +84,13 @@ body main table {
 
 #grid_index {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.3fr 0.3fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.3fr 0.3fr 0.3fr;
     grid-template-areas:
-    "header header"
-    "nav nav"
-    "pie pie";
+    "header"
+    "nav"
+    "galeria"
+    "pie";
     grid-column-gap: 3rem;
     grid-row-gap: 3rem;
 }
@@ -93,10 +99,11 @@ body main table {
     #grid_index {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.3fr 0.3fr;
+        grid-template-rows: 1fr 0.3fr 0.3fr 0.3fr;
         grid-template-areas:
         "header"
         "nav"
+        "galeria"
         "pie";
         grid-column-gap: 3rem;
         grid-row-gap: 3rem;
@@ -140,6 +147,11 @@ nav {
     grid-area: nav;
     display: flex;
     justify-content: center;
+    transition: all 2s;
+}
+
+nav:hover {
+    transform: scale(1,1.1);
 }
 
 main {
@@ -159,4 +171,14 @@ footer {
     grid-area: pie;
     display: flex;
     justify-content: flex-end;
+}
+
+.transicion {
+    display: flex;
+    justify-content: flex-start;
+    transition: all 2s;
+}
+
+.transicion:hover {
+    transform: translate(88%, 0%);
 }
